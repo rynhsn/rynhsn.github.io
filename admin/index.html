@@ -22,9 +22,6 @@
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
-    <!--begin::Page Vendor Stylesheets(used by this page)-->
-    <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
-    <!--end::Page Vendor Stylesheets-->
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
     <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
@@ -33,14 +30,16 @@
 <!--end::Head-->
 <!--begin::Body-->
 
-<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed aside-enabled aside-fixed">
+<body id="kt_body"
+    class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed"
+    style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
     <!--begin::Main-->
     <!--begin::Root-->
     <div class="d-flex flex-column flex-root">
         <!--begin::Page-->
         <div class="page d-flex flex-row flex-column-fluid">
             <!--begin::Aside-->
-            <div id="kt_aside" class="aside aside-dark aside-hoverable" data-kt-drawer="true"
+            <div id="kt_aside" class="aside aside-light aside-hoverable" data-kt-drawer="true"
                 data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}"
                 data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}"
                 data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
@@ -48,11 +47,11 @@
                 <div class="aside-logo flex-column-auto" id="kt_aside_logo">
                     <!--begin::Logo-->
                     <a href="../../demo1/dist/index.html">
-                        <img alt="Logo" src="assets/media/logos/logo-1-dark.svg" class="h-25px logo" />
+                        <img alt="Logo" src="assets/media/logos/logo-1.svg" class="h-25px logo" />
                     </a>
                     <!--end::Logo-->
                     <!--begin::Aside toggler-->
-                    <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle"
+                    <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-success aside-toggle"
                         data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
                         data-kt-toggle-name="aside-minimize">
                         <!--begin::Svg Icon | path: icons/duotune/arrows/arr079.svg-->
@@ -105,27 +104,64 @@
                                         </span>
                                         <!--end::Svg Icon-->
                                     </span>
-                                    <span class="menu-title">Halaman utama</span>
+                                    <span class="menu-title">Halaman Utama</span>
                                 </a>
                             </div>
                             <div class="menu-item">
-                                <a class="menu-link" href="../../demo1/dist/dashboards/no-toolbar.html">
+                                <a class="menu-link" href="#">
                                     <span class="menu-icon">
-                                        <!--begin::Svg Icon | path: icons/duotune/art/art002.svg-->
-                                        <span class="svg-icon svg-icon-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25"
-                                                viewBox="0 0 24 25" fill="none">
+                                        <!--begin::Svg Icon | path: assets/media/icons/duotune/abstract/abs047.svg-->
+                                        <span class="svg-icon svg-icon-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                 <path opacity="0.3"
-                                                    d="M8.9 21L7.19999 22.6999C6.79999 23.0999 6.2 23.0999 5.8 22.6999L4.1 21H8.9ZM4 16.0999L2.3 17.8C1.9 18.2 1.9 18.7999 2.3 19.1999L4 20.9V16.0999ZM19.3 9.1999L15.8 5.6999C15.4 5.2999 14.8 5.2999 14.4 5.6999L9 11.0999V21L19.3 10.6999C19.7 10.2999 19.7 9.5999 19.3 9.1999Z"
+                                                    d="M12.3028 2C2.20276 8.5 0.302758 19.4 12.3028 22C24.3028 19.4 22.4028 8.5 12.3028 2Z"
                                                     fill="black" />
                                                 <path
-                                                    d="M21 15V20C21 20.6 20.6 21 20 21H11.8L18.8 14H20C20.6 14 21 14.4 21 15ZM10 21V4C10 3.4 9.6 3 9 3H4C3.4 3 3 3.4 3 4V21C3 21.6 3.4 22 4 22H9C9.6 22 10 21.6 10 21ZM7.5 18.5C7.5 19.1 7.1 19.5 6.5 19.5C5.9 19.5 5.5 19.1 5.5 18.5C5.5 17.9 5.9 17.5 6.5 17.5C7.1 17.5 7.5 17.9 7.5 18.5Z"
+                                                    d="M12.3028 22L20.6028 13.7C20.7028 17.5 18.2028 20.7 12.3028 22ZM19.6028 9.7C19.1028 8.7 18.5028 7.7 17.6028 6.7L12.3028 12V17L19.6028 9.7ZM9.40277 4.10001C8.50277 4.90001 7.60277 5.80001 6.90277 6.60001L12.2028 11.9V6.89999L9.40277 4.10001ZM12.3028 2V7L15.2028 4.10001C14.3028 3.40001 13.3028 2.7 12.3028 2ZM4.00278 13.7L12.3028 22V17L5.00278 9.7C4.40278 11.1 4.00278 12.4 4.00278 13.7Z"
                                                     fill="black" />
-                                            </svg>
-                                        </span>
+                                            </svg></span>
                                         <!--end::Svg Icon-->
                                     </span>
-                                    <span class="menu-title">No Toolbar</span>
+                                    <span class="menu-title">Kelola Tanaman</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link" href="#">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: assets/media/icons/duotune/general/gen045.svg-->
+                                        <span class="svg-icon svg-icon-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10"
+                                                    fill="black" />
+                                                <rect x="11" y="17" width="7" height="2" rx="1"
+                                                    transform="rotate(-90 11 17)" fill="black" />
+                                                <rect x="11" y="9" width="2" height="2" rx="1"
+                                                    transform="rotate(-90 11 9)" fill="black" />
+                                            </svg></span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Info Tanaman</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link" href="#">
+                                    <span class="menu-icon">
+                                        <!--begin::Svg Icon | path: assets/media/icons/duotune/technology/teh010.svg-->
+                                        <span class="svg-icon svg-icon-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M11 15.9C9.5 13 6.5 11 3 11C3 15.6 6.5 19.4 11 19.9V15.9Z"
+                                                    fill="black" />
+                                                <path opacity="0.3"
+                                                    d="M21 11C17.5 11 14.5 13 13 15.9V11C13 10.4 12.6 10 12 10C11.4 10 11 10.4 11 11V21C11 21.6 11.4 22 12 22C12.6 22 13 21.6 13 21V19.9C17.5 19.4 21 15.6 21 11Z"
+                                                    fill="black" />
+                                                <path opacity="0.3"
+                                                    d="M12 9C13.933 9 15.5 7.433 15.5 5.5C15.5 3.567 13.933 2 12 2C10.067 2 8.5 3.567 8.5 5.5C8.5 7.433 10.067 9 12 9Z"
+                                                    fill="black" />
+                                                <path d="M14 11L12 12L10 11V8.40002H14V11Z" fill="black" />
+                                            </svg></span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                    <span class="menu-title">Seleksi</span>
                                 </a>
                             </div>
                         </div>
@@ -136,10 +172,10 @@
                 <!--end::Aside menu-->
                 <!--begin::Footer-->
                 <div class="aside-footer flex-column-auto pt-5 pb-7 px-5" id="kt_aside_footer">
-                    <a href="../login.html" class="btn btn-custom btn-primary w-100" data-bs-toggle="tooltip"
+                    <a href="../login.html" class="btn btn-custom btn-success w-100" data-bs-toggle="tooltip"
                         data-bs-trigger="hover" data-bs-dismiss-="click"
                         title="200+ in-house components and 3rd-party plugins">
-                        <span class="btn-label">Sign out</span>
+                        <span class="btn-label">Sign Out</span>
                         <!--begin::Svg Icon | path: icons/duotune/general/gen005.svg-->
                         <span class="svg-icon btn-icon svg-icon-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -159,7 +195,7 @@
             <!--begin::Wrapper-->
             <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
                 <!--begin::Header-->
-                <div id="kt_header" style="" class="header align-items-stretch">
+                <div id="kt_header" class="header align-items-stretch">
                     <!--begin::Container-->
                     <div class="container-fluid d-flex align-items-stretch justify-content-between">
                         <!--begin::Aside mobile toggle-->
@@ -207,7 +243,7 @@
                                     <!--begin::Breadcrumb-->
                                     <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
                                         <!--begin::Item-->
-                                        <li class="breadcrumb-item text-dark">Halaman utama</li>
+                                        <li class="breadcrumb-item text-dark">Halaman Uutama</li>
                                         <!--end::Item-->
                                     </ul>
                                     <!--end::Breadcrumb-->
