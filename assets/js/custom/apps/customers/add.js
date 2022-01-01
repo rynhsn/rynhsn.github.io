@@ -3,68 +3,45 @@ var KTModalCustomersAdd = function () {
     var t, e, o, n, r, i;
     return {
         init: function () {
-            i = new bootstrap.Modal(document.querySelector("#kt_modal_add_tanaman")), r = document.querySelector("#kt_modal_add_tanaman_form"), t = r.querySelector("#kt_modal_add_tanaman_submit"), e = r.querySelector("#kt_modal_add_tanaman_cancel"), o = r.querySelector("#kt_modal_add_tanaman_close"), n = FormValidation.formValidation(r, {
+            i = new bootstrap.Modal(document.querySelector("#kt_modal_add_tanaman")), 
+            r = document.querySelector("#kt_modal_add_tanaman_form"), 
+            t = r.querySelector("#kt_modal_add_tanaman_submit"), 
+            e = r.querySelector("#kt_modal_add_tanaman_cancel"), 
+            o = r.querySelector("#kt_modal_add_tanaman_close"), 
+            n = FormValidation.formValidation(r, {
                 fields: {
-                    name: {
+                    ntanaman: {
                         validators: {
                             notEmpty: {
-                                message: "Customer name is required"
+                                message: "Nama tanaman is required"
                             }
                         }
                     },
-                    email: {
+                    suhu: {
                         validators: {
                             notEmpty: {
-                                message: "Customer email is required"
+                                message: "Suhu udara is required"
                             }
                         }
                     },
-                    "first-name": {
+                    chujan: {
                         validators: {
                             notEmpty: {
-                                message: "First name is required"
+                                message: "Curah hujan is required"
                             }
                         }
                     },
-                    "last-name": {
+                    ketinggian: {
                         validators: {
                             notEmpty: {
-                                message: "Last name is required"
+                                message: "Ketinggian is required"
                             }
                         }
                     },
-                    country: {
+                    ph: {
                         validators: {
                             notEmpty: {
-                                message: "Country is required"
-                            }
-                        }
-                    },
-                    address1: {
-                        validators: {
-                            notEmpty: {
-                                message: "Address 1 is required"
-                            }
-                        }
-                    },
-                    city: {
-                        validators: {
-                            notEmpty: {
-                                message: "City is required"
-                            }
-                        }
-                    },
-                    state: {
-                        validators: {
-                            notEmpty: {
-                                message: "State is required"
-                            }
-                        }
-                    },
-                    postcode: {
-                        validators: {
-                            notEmpty: {
-                                message: "Postcode is required"
+                                message: "pH tanah is required"
                             }
                         }
                     }
@@ -77,9 +54,7 @@ var KTModalCustomersAdd = function () {
                         eleValidClass: ""
                     })
                 }
-            }), $(r.querySelector('[name="country"]')).on("change", (function () {
-                n.revalidateField("country")
-            })), t.addEventListener("click", (function (e) {
+            }), t.addEventListener("click", (function (e) {
                 e.preventDefault(), n && n.validate().then((function (e) {
                     console.log("validated!"), "Valid" == e ? (t.setAttribute("data-kt-indicator", "on"), t.disabled = !0, setTimeout((function () {
                         t.removeAttribute("data-kt-indicator"), Swal.fire({

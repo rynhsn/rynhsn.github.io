@@ -3,18 +3,20 @@ var KTSigninGeneral = function () {
     var t, e, i;
     return {
         init: function () {
-            t = document.querySelector("#kt_sign_in_form"), e = document.querySelector("#kt_sign_in_submit"), i = FormValidation.formValidation(t, {
+            t = document.querySelector("#kt_sign_in_form"), 
+            e = document.querySelector("#kt_sign_in_submit"), 
+            i = FormValidation.formValidation(t, {
                 fields: {
-                    email: {
-                        validators: {
-                            notEmpty: {
-                                message: "Email address is required"
-                            },
-                            emailAddress: {
-                                message: "The value is not a valid email address"
-                            }
-                        }
-                    },
+                    // email: {
+                    //     validators: {
+                    //         notEmpty: {
+                    //             message: "Email address is required"
+                    //         },
+                    //         emailAddress: {
+                    //             message: "The value is not a valid email address"
+                    //         }
+                    //     }
+                    // },
                     username: {
                         validators: {
                             notEmpty: {
@@ -49,9 +51,10 @@ var KTSigninGeneral = function () {
                             }
                         }).then((function (e) {
                             e.isConfirmed && (
-                                t.querySelector('[name="email"]').value = "",
-                                t.querySelector('[name="username"]').value = "",
-                                t.querySelector('[name="password"]').value = "")
+                                // t.querySelector('[name="email"]').value = "",
+                                // t.querySelector('[name="username"]').value = "",
+                                // t.querySelector('[name="password"]').value = "", 
+                                e.disabled = !1, window.location = t.getAttribute("data-kt-redirect"))
                         }))
                     }), 2e3)) : Swal.fire({
                         text: "Maaf, sepertinya terjadi kesalahan, silahkan coba lagi.",
