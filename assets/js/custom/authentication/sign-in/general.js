@@ -20,14 +20,14 @@ var KTSigninGeneral = function () {
                     username: {
                         validators: {
                             notEmpty: {
-                                message: "Username tidak boleh kosong"
+                                message: "Username is required"
                             }
                         }
                     },
                     password: {
                         validators: {
                             notEmpty: {
-                                message: "Password tidak boleh kosong"
+                                message: "Password is required"
                             }
                         }
                     }
@@ -45,7 +45,7 @@ var KTSigninGeneral = function () {
                             text: "Kamu berhasil masuk!",
                             icon: "success",
                             buttonsStyling: !1,
-                            confirmButtonText: "Ok, siap!",
+                            confirmButtonText: "Ok, got it!",
                             customClass: {
                                 confirmButton: "btn btn-primary"
                             }
@@ -57,7 +57,7 @@ var KTSigninGeneral = function () {
                                 e.disabled = !1, window.location = t.getAttribute("data-kt-redirect"))
                         }))
                     }), 2e3)) : Swal.fire({
-                        text: "Maaf, sepertinya terjadi kesalahan, silahkan coba lagi.",
+                        text: "Sorry, looks like there are some errors detected, please try again.",
                         icon: "error",
                         buttonsStyling: !1,
                         confirmButtonText: "Ok, siap!",

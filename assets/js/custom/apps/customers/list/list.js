@@ -103,8 +103,8 @@ var KTCustomersList = function () {
         init: function () {
             (n = document.querySelector("#kt_tanaman_table")) && (n.querySelectorAll("tbody tr").forEach((t => {
                 const e = t.querySelectorAll("td"),
-                    o = moment(e[3].innerHTML, "DD MMM YYYY, LT").format();
-                e[3].setAttribute("data-order", o)
+                    o = moment(e[2].innerHTML, "DD MMM YYYY, LT").format();
+                e[2].setAttribute("data-order", o)
             })), (t = $(n).DataTable({
                 info: !1,
                 order: [],
@@ -113,7 +113,7 @@ var KTCustomersList = function () {
                     targets: 0
                 }, {
                     orderable: !1,
-                    targets: 4
+                    targets: 3
                 }]
             })).on("draw", (function () {
                 r(), c(), l()
