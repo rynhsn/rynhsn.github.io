@@ -1,7 +1,7 @@
 "use strict";
 var KTCustomersList = function () {
     var t, e, o, n, c = () => {
-            n.querySelectorAll('[data-kt-customer-table-filter="delete_row"]').forEach((e => {
+            n.querySelectorAll('[data-kt-tanaman-table-filter="delete_row"]').forEach((e => {
                 e.addEventListener("click", (function (e) {
                     e.preventDefault();
                     const o = e.target.closest("tr"),
@@ -43,7 +43,7 @@ var KTCustomersList = function () {
         },
         r = () => {
             const e = n.querySelectorAll('[type="checkbox"]'),
-                o = document.querySelector('[data-kt-customer-table-select="delete_selected"]');
+                o = document.querySelector('[data-kt-tanaman-table-select="delete_selected"]');
             e.forEach((t => {
                 t.addEventListener("click", (function () {
                     setTimeout((function () {
@@ -89,9 +89,9 @@ var KTCustomersList = function () {
             }))
         };
     const l = () => {
-        const t = document.querySelector('[data-kt-customer-table-toolbar="base"]'),
-            e = document.querySelector('[data-kt-customer-table-toolbar="selected"]'),
-            o = document.querySelector('[data-kt-customer-table-select="selected_count"]'),
+        const t = document.querySelector('[data-kt-tanaman-table-toolbar="base"]'),
+            e = document.querySelector('[data-kt-tanaman-table-toolbar="selected"]'),
+            o = document.querySelector('[data-kt-tanaman-table-select="selected_count"]'),
             c = n.querySelectorAll('tbody [type="checkbox"]');
         let r = !1,
             l = 0;
@@ -101,7 +101,7 @@ var KTCustomersList = function () {
     };
     return {
         init: function () {
-            (n = document.querySelector("#kt_customers_table")) && (n.querySelectorAll("tbody tr").forEach((t => {
+            (n = document.querySelector("#kt_tanaman_table")) && (n.querySelectorAll("tbody tr").forEach((t => {
                 const e = t.querySelectorAll("td"),
                     o = moment(e[3].innerHTML, "DD MMM YYYY, LT").format();
                 e[3].setAttribute("data-order", o)
@@ -117,9 +117,9 @@ var KTCustomersList = function () {
                 }]
             })).on("draw", (function () {
                 r(), c(), l()
-            })), r(), document.querySelector('[data-kt-customer-table-filter="search"]').addEventListener("keyup", (function (e) {
+            })), r(), document.querySelector('[data-kt-tanaman-table-filter="search"]').addEventListener("keyup", (function (e) {
                 t.search(e.target.value).draw()
-            })), e = $('[data-kt-customer-table-filter="month"]'), o = document.querySelectorAll('[data-kt-customer-table-filter="payment_type"] [name="payment_type"]'), document.querySelector('[data-kt-customer-table-filter="filter"]').addEventListener("click", (function () {
+            })), e = $('[data-kt-tanaman-table-filter="month"]'), o = document.querySelectorAll('[data-kt-tanaman-table-filter="payment_type"] [name="payment_type"]'), document.querySelector('[data-kt-tanaman-table-filter="filter"]').addEventListener("click", (function () {
                 const n = e.val();
                 let c = "";
                 o.forEach((t => {
@@ -127,7 +127,7 @@ var KTCustomersList = function () {
                 }));
                 const r = n + " " + c;
                 t.search(r).draw()
-            })), c(), document.querySelector('[data-kt-customer-table-filter="reset"]').addEventListener("click", (function () {
+            })), c(), document.querySelector('[data-kt-tanaman-table-filter="reset"]').addEventListener("click", (function () {
                 e.val(null).trigger("change"), o[0].checked = !0, t.search("").draw()
             })))
         }

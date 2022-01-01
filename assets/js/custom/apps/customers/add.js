@@ -3,7 +3,7 @@ var KTModalCustomersAdd = function () {
     var t, e, o, n, r, i;
     return {
         init: function () {
-            i = new bootstrap.Modal(document.querySelector("#kt_modal_add_customer")), r = document.querySelector("#kt_modal_add_customer_form"), t = r.querySelector("#kt_modal_add_customer_submit"), e = r.querySelector("#kt_modal_add_customer_cancel"), o = r.querySelector("#kt_modal_add_customer_close"), n = FormValidation.formValidation(r, {
+            i = new bootstrap.Modal(document.querySelector("#kt_modal_add_tanaman")), r = document.querySelector("#kt_modal_add_tanaman_form"), t = r.querySelector("#kt_modal_add_tanaman_submit"), e = r.querySelector("#kt_modal_add_tanaman_cancel"), o = r.querySelector("#kt_modal_add_tanaman_close"), n = FormValidation.formValidation(r, {
                 fields: {
                     name: {
                         validators: {
