@@ -1390,11 +1390,11 @@ body {
 }
 
 .contact--lockup .modal--options li:nth-child(1) {
-    background-color: #1769ff
+    background-color: #282828;
 }
 
 .contact--lockup .modal--options li:nth-child(2) {
-    background-color: #ea4c89
+    background-color: darkorange;
 }
 
 .contact--lockup .modal--options li:nth-child(3) {
